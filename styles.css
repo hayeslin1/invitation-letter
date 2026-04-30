@@ -656,20 +656,48 @@ h1 span {
   }
 
   .rsvp-section {
-    padding: 22px 16px;
+    padding: 20px 14px;
   }
 
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .form-field {
+    gap: 6px;
+  }
+
+  .form-field span {
+    font-size: 0.9rem;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    padding: 13px 14px;
+    border-radius: 14px;
+  }
+
+  .form-field textarea {
+    min-height: 96px;
   }
 
   .form-actions {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
+    margin-top: 14px;
   }
 
   .form-status {
     text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .form-submit {
+    width: 100%;
+    min-width: 0;
   }
 
   .hosts,

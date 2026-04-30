@@ -4,6 +4,20 @@
   const carPlateField = document.getElementById("car-plate-field");
   const carPlateInput = form ? form.querySelector('input[name="car_plate"]') : null;
   const status = document.getElementById("form-status");
+  const supabaseUrl =
+    (form && form.dataset.supabaseUrl) || "https://rbuwtmtnhtnnmycbqyud.supabase.co";
+  const supabaseKey =
+    (form && form.dataset.supabaseKey) || "sb_publishable_fXHfk9XBN7g_kOE5T-WiEw_oaTvVJDO";
+
+  fetch(supabaseUrl + "/functions/v1/track-visit", {
+    method: "POST",
+    headers: {
+      apikey: supabaseKey,
+    },
+    keepalive: true,
+  }).catch(function () {
+    console.warn("visit tracking failed");
+  });
 
   if (!form || !parkingSelect || !carPlateField || !carPlateInput || !status) {
     return;
@@ -76,7 +90,7 @@
             "Content-Type": "application/json",
             apikey: form.dataset.supabaseKey,
             Authorization: "Bearer " + form.dataset.supabaseKey,
-            Prefer: "return=representation",
+            Prefer: "return=minimal",
           },
           body: JSON.stringify(payload),
         }
