@@ -350,6 +350,7 @@ h1 span {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .reminder-strip {
@@ -453,7 +454,15 @@ h1 span {
 
   .gallery-card,
   .gallery-card-wide {
-    min-height: 240px;
+    min-height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .gallery-card img {
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: #f7efe8;
   }
 
   .photo-frame::before {
