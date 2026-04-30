@@ -1,13 +1,15 @@
 :root {
-  --bg: #f6eadf;
-  --bg-deep: #e9d0b8;
-  --card: rgba(255, 252, 247, 0.78);
-  --text: #5a3424;
-  --muted: #8a6454;
-  --accent: #c26d4d;
-  --accent-soft: #f1c6a8;
-  --line: rgba(125, 79, 56, 0.16);
-  --shadow: 0 24px 80px rgba(127, 67, 40, 0.16);
+  --bg: #8f0d1c;
+  --bg-deep: #54040f;
+  --card: rgba(255, 248, 241, 0.94);
+  --text: #5d1e1d;
+  --muted: #8b5b4a;
+  --accent: #bf1f2f;
+  --accent-strong: #8f0d1c;
+  --gold: #c9982e;
+  --accent-soft: #f4d9a4;
+  --line: rgba(143, 13, 28, 0.12);
+  --shadow: 0 28px 90px rgba(49, 1, 9, 0.28);
 }
 
 * {
@@ -22,9 +24,9 @@ body {
     "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(255, 214, 178, 0.5), transparent 34%),
-    linear-gradient(135deg, var(--bg) 0%, #f9f2ea 42%, var(--bg-deep) 100%);
+    radial-gradient(circle at top left, rgba(255, 214, 122, 0.2), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(255, 224, 177, 0.18), transparent 24%),
+    linear-gradient(135deg, #a41022 0%, var(--bg) 32%, #7c0a18 64%, var(--bg-deep) 100%);
 }
 
 .page-shell {
@@ -46,7 +48,7 @@ body {
   left: -80px;
   width: 200px;
   height: 200px;
-  background: rgba(255, 238, 204, 0.9);
+  background: rgba(255, 202, 110, 0.55);
 }
 
 .glow-right {
@@ -54,7 +56,7 @@ body {
   bottom: 12%;
   width: 240px;
   height: 240px;
-  background: rgba(220, 150, 116, 0.35);
+  background: rgba(255, 213, 133, 0.28);
 }
 
 .invite-card {
@@ -74,7 +76,7 @@ body {
   content: "";
   position: absolute;
   inset: 14px;
-  border: 1px solid rgba(194, 109, 77, 0.12);
+  border: 1px solid rgba(201, 152, 46, 0.28);
   border-radius: 24px;
   pointer-events: none;
 }
@@ -94,21 +96,32 @@ body {
 .hero-ornament .line {
   width: 74px;
   height: 1px;
-  background: rgba(194, 109, 77, 0.34);
+  background: rgba(201, 152, 46, 0.66);
 }
 
 .hero-ornament .dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(194, 109, 77, 0.5);
+  background: rgba(201, 152, 46, 0.92);
+}
+
+.hero-blessing {
+  display: inline-flex;
+  margin: 0 0 16px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(191, 31, 47, 0.08), rgba(201, 152, 46, 0.18));
+  color: var(--accent-strong);
+  font-size: 0.92rem;
+  letter-spacing: 0.12em;
 }
 
 .eyebrow {
   margin: 0 0 14px;
   font-size: 12px;
   letter-spacing: 0.32em;
-  color: var(--muted);
+  color: var(--gold);
 }
 
 h1 {
@@ -122,7 +135,8 @@ h1 {
 h1 span {
   display: block;
   margin: 10px 0 6px;
-  color: var(--accent);
+  color: var(--accent-strong);
+  text-shadow: 0 10px 28px rgba(191, 31, 47, 0.12);
 }
 
 .lead {
@@ -142,7 +156,7 @@ h1 span {
   min-height: 280px;
   border-radius: 28px;
   background:
-    linear-gradient(180deg, rgba(255, 252, 248, 0.8), rgba(240, 217, 197, 0.7)),
+    linear-gradient(180deg, rgba(255, 250, 244, 0.94), rgba(249, 226, 199, 0.84)),
     linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
   border: 1px solid var(--line);
   overflow: hidden;
@@ -199,7 +213,7 @@ h1 span {
   background: rgba(255, 255, 255, 0.7);
   border: 1px solid rgba(194, 109, 77, 0.16);
   font-size: 0.9rem;
-  color: var(--accent);
+  color: var(--accent-strong);
   letter-spacing: 0.08em;
 }
 
@@ -208,11 +222,13 @@ h1 span {
   margin: 0 auto 18px;
   padding: 22px 22px 18px;
   text-align: center;
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 247, 239, 0.84), rgba(255, 255, 255, 0.4));
 }
 
 .intro-kicker {
   margin: 0 0 10px;
-  color: var(--accent);
+  color: var(--accent-strong);
   font-size: 0.78rem;
   letter-spacing: 0.24em;
 }
@@ -235,6 +251,7 @@ h1 span {
   background: rgba(255, 255, 255, 0.56);
   border: 1px solid var(--line);
   animation: fade-up 0.9s ease both;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.42);
 }
 
 .detail-label {
@@ -242,7 +259,7 @@ h1 span {
   font-size: 0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent-strong);
 }
 
 .detail-value {
@@ -262,7 +279,7 @@ h1 span {
   margin-top: 20px;
   padding: 26px 24px;
   border-radius: 26px;
-  background: linear-gradient(135deg, rgba(194, 109, 77, 0.12), rgba(255, 255, 255, 0.52));
+  background: linear-gradient(135deg, rgba(191, 31, 47, 0.08), rgba(201, 152, 46, 0.14));
   border: 1px solid var(--line);
 }
 
@@ -286,6 +303,55 @@ h1 span {
   font-weight: 600;
 }
 
+.gallery-section {
+  margin-top: 22px;
+}
+
+.section-heading {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.section-kicker {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: 0.76rem;
+  letter-spacing: 0.28em;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: "STSong", "Songti SC", "Noto Serif CJK SC", serif;
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  gap: 14px;
+}
+
+.gallery-card {
+  margin: 0;
+  min-height: 220px;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid var(--line);
+  background: #f5ebe3;
+}
+
+.gallery-card-wide {
+  grid-row: span 2;
+  min-height: 100%;
+}
+
+.gallery-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .reminder-strip {
   display: flex;
   justify-content: center;
@@ -302,7 +368,7 @@ h1 span {
   padding: 10px 16px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.66);
-  border: 1px solid rgba(194, 109, 77, 0.12);
+  border: 1px solid rgba(191, 31, 47, 0.12);
   color: var(--muted);
   font-size: 0.94rem;
 }
@@ -326,15 +392,33 @@ h1 span {
 }
 
 .primary-btn {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
   color: #fffdf8;
-  box-shadow: 0 14px 28px rgba(194, 109, 77, 0.22);
+  box-shadow: 0 14px 28px rgba(143, 13, 28, 0.28);
 }
 
 .secondary-btn {
-  color: var(--accent);
+  color: var(--accent-strong);
   background: rgba(255, 255, 255, 0.72);
-  border: 1px solid rgba(194, 109, 77, 0.22);
+  border: 1px solid rgba(191, 31, 47, 0.22);
+}
+
+.credits {
+  margin-top: 22px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+.credits p {
+  margin: 6px 0 0;
+}
+
+.credits a {
+  margin: 0 8px;
+  color: var(--accent-strong);
+  text-decoration: none;
 }
 
 @keyframes fade-up {
@@ -361,6 +445,15 @@ h1 span {
 
   .intro-panel {
     padding: 8px 0 12px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-card,
+  .gallery-card-wide {
+    min-height: 240px;
   }
 
   .photo-frame::before {
