@@ -316,6 +316,130 @@ h1 span {
   margin-top: 6px;
 }
 
+.rsvp-section {
+  margin-top: 24px;
+  padding: 24px 20px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(255, 250, 245, 0.98), rgba(255, 243, 233, 0.92));
+  border: 1px solid rgba(191, 31, 47, 0.12);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.52);
+}
+
+.section-block-heading {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.section-block-kicker {
+  margin: 0 0 8px;
+  color: var(--gold);
+  font-size: 0.78rem;
+  letter-spacing: 0.28em;
+}
+
+.section-block-heading h2 {
+  margin: 0;
+  font-family: "STSong", "Songti SC", "Noto Serif CJK SC", serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.section-block-copy {
+  margin: 10px auto 0;
+  max-width: 560px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.guest-form {
+  margin-top: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field span {
+  color: var(--accent-strong);
+  font-size: 0.92rem;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid rgba(191, 31, 47, 0.16);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.88);
+  padding: 14px 15px;
+  color: var(--text);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: rgba(191, 31, 47, 0.4);
+  box-shadow: 0 0 0 4px rgba(191, 31, 47, 0.08);
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 112px;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.form-submit {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.form-submit:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.form-status {
+  flex: 1;
+  margin: 0;
+  color: var(--muted);
+  text-align: right;
+  line-height: 1.6;
+}
+
+.form-status[data-state="success"] {
+  color: #2c7a4b;
+}
+
+.form-status[data-state="error"] {
+  color: #b42318;
+}
+
 .detail-card {
   position: relative;
   padding: 20px;
@@ -529,6 +653,23 @@ h1 span {
 
   .details-grid {
     grid-template-columns: 1fr;
+  }
+
+  .rsvp-section {
+    padding: 22px 16px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-status {
+    text-align: center;
   }
 
   .hosts,

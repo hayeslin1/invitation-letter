@@ -18,7 +18,7 @@
     <meta property="og:site_name" content="蔺乐琪满月宴邀请函" />
     <meta
       property="og:description"
-      content="谨定于 2026 年 5 月 2 日举行蔺乐琪满月宴，敬备薄酌，恭请光临。"
+      content="谨定于 2026 年 5 月 2 日举行蔺乐琪满月宴，敬备薄酌，恭请光临，并可在线登记来宾信息。"
     />
     <meta property="og:image" content="./images/festive-baby.jpg" />
     <meta property="og:locale" content="zh_CN" />
@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="蔺乐琪满月宴邀请函" />
     <meta
       name="twitter:description"
-      content="谨定于 2026 年 5 月 2 日举行蔺乐琪满月宴，敬备薄酌，恭请光临。"
+      content="谨定于 2026 年 5 月 2 日举行蔺乐琪满月宴，敬备薄酌，恭请光临，并可在线登记来宾信息。"
     />
     <meta name="twitter:image" content="./images/festive-baby.jpg" />
     <link rel="stylesheet" href="./styles.css" />
@@ -104,6 +104,76 @@
           </article>
         </section>
 
+        <section class="rsvp-section" aria-labelledby="rsvp-title">
+          <div class="section-block-heading">
+            <p class="section-block-kicker">GUEST REGISTRATION</p>
+            <h2 id="rsvp-title">来宾登记</h2>
+            <p class="section-block-copy">请留下您的到场信息，我们将提前为您安排席位与车位。</p>
+          </div>
+
+          <form
+            class="guest-form"
+            id="guest-form"
+            data-supabase-url="https://rbuwtmtnhtnnmycbqyud.supabase.co"
+            data-supabase-key="sb_publishable_fXHfk9XBN7g_kOE5T-WiEw_oaTvVJDO"
+          >
+            <div class="form-grid">
+              <label class="form-field">
+                <span>姓名</span>
+                <input type="text" name="name" maxlength="30" placeholder="请输入姓名" required />
+              </label>
+
+              <label class="form-field">
+                <span>手机号</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  inputmode="numeric"
+                  pattern="^1[0-9]{10}$"
+                  maxlength="11"
+                  placeholder="请输入 11 位手机号"
+                  required
+                />
+              </label>
+
+              <label class="form-field">
+                <span>几人</span>
+                <input
+                  type="number"
+                  name="guest_count"
+                  min="1"
+                  max="20"
+                  value="1"
+                  required
+                />
+              </label>
+
+              <label class="form-field">
+                <span>是否需要预留车位</span>
+                <select name="need_parking" id="need-parking">
+                  <option value="false" selected>否</option>
+                  <option value="true">是</option>
+                </select>
+              </label>
+
+              <label class="form-field is-hidden" id="car-plate-field">
+                <span>车牌号</span>
+                <input type="text" name="car_plate" maxlength="20" placeholder="如需车位请填写车牌号" />
+              </label>
+
+              <label class="form-field form-field-full">
+                <span>备注</span>
+                <textarea name="notes" rows="4" maxlength="200" placeholder="可填写到场说明或其他备注（选填）"></textarea>
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="primary-btn form-submit">提交登记</button>
+              <p class="form-status" id="form-status" aria-live="polite"></p>
+            </div>
+          </form>
+        </section>
+
         <section class="message-block">
           <p class="quote">
             “一朝初诞，满月成礼。愿这份新生的欢喜，得与至亲好友一同见证，共享团圆与吉庆。”
@@ -131,5 +201,6 @@
         </section>
       </main>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
