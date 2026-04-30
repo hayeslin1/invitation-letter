@@ -153,10 +153,11 @@ h1 span {
   place-items: center;
   margin: 34px auto;
   width: min(100%, 680px);
-  min-height: 280px;
+  min-height: 340px;
   border-radius: 28px;
   background:
-    linear-gradient(180deg, rgba(255, 250, 244, 0.94), rgba(249, 226, 199, 0.84)),
+    radial-gradient(circle at top, rgba(255, 230, 185, 0.55), transparent 36%),
+    linear-gradient(180deg, rgba(255, 248, 240, 0.98), rgba(251, 230, 206, 0.88)),
     linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
   border: 1px solid var(--line);
   overflow: hidden;
@@ -166,55 +167,124 @@ h1 span {
 .photo-frame::after {
   content: "";
   position: absolute;
-  border-radius: 50%;
+  border-radius: 999px;
 }
 
 .photo-frame::before {
-  width: 180px;
-  height: 180px;
-  background: rgba(255, 241, 216, 0.88);
-  top: 40px;
-  left: 80px;
+  width: 240px;
+  height: 240px;
+  background: rgba(201, 152, 46, 0.12);
+  top: 34px;
+  left: -40px;
 }
 
 .photo-frame::after {
-  width: 220px;
-  height: 220px;
-  background: rgba(243, 188, 149, 0.28);
-  right: 48px;
-  bottom: -30px;
+  width: 260px;
+  height: 260px;
+  background: rgba(191, 31, 47, 0.1);
+  right: -50px;
+  bottom: -40px;
 }
 
-.moon {
-  position: relative;
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  background: linear-gradient(145deg, #fff9ee, #f3d9ba);
-  box-shadow:
-    inset -18px -16px 30px rgba(197, 125, 73, 0.12),
-    0 24px 36px rgba(179, 126, 84, 0.18);
-}
-
-.moon::after {
-  content: "";
+.frame-spark {
   position: absolute;
-  inset: 26px 24px 26px 54px;
+  top: 50%;
+  width: 84px;
+  height: 84px;
+  transform: translateY(-50%) rotate(45deg);
+  border: 1px solid rgba(201, 152, 46, 0.32);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.spark-left {
+  left: 52px;
+}
+
+.spark-right {
+  right: 52px;
+}
+
+.celebration-emblem {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.emblem-kicker {
+  margin: 0 0 16px;
+  color: var(--gold);
+  font-size: 0.82rem;
+  letter-spacing: 0.32em;
+}
+
+.emblem-ring {
+  display: grid;
+  place-items: center;
+  width: 260px;
+  height: 260px;
   border-radius: 50%;
-  background: rgba(239, 209, 180, 0.72);
+  background:
+    radial-gradient(circle, rgba(255, 248, 239, 0.96) 0 56%, transparent 57%),
+    conic-gradient(
+      from 180deg,
+      rgba(201, 152, 46, 0.92),
+      rgba(249, 222, 156, 0.95),
+      rgba(191, 31, 47, 0.9),
+      rgba(201, 152, 46, 0.92)
+    );
+  box-shadow:
+    0 24px 44px rgba(143, 13, 28, 0.14),
+    inset 0 0 0 8px rgba(255, 250, 243, 0.76);
+}
+
+.emblem-core {
+  display: grid;
+  place-items: center;
+  width: 186px;
+  height: 186px;
+  padding: 20px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(191, 31, 47, 0.96), rgba(134, 8, 23, 1));
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 231, 182, 0.48),
+    inset 0 12px 18px rgba(255, 255, 255, 0.08);
+}
+
+.emblem-name {
+  margin: 0;
+  color: #fff7ec;
+  font-family: "STSong", "Songti SC", "Noto Serif CJK SC", serif;
+  font-size: clamp(1.9rem, 5vw, 2.7rem);
+  line-height: 1.15;
+  letter-spacing: 0.08em;
+}
+
+.emblem-title {
+  margin: 10px 0 0;
+  color: rgba(255, 234, 194, 0.92);
+  font-size: 1rem;
+  letter-spacing: 0.28em;
+}
+
+.emblem-copy {
+  margin: 18px 0 0;
+  color: var(--accent-strong);
+  font-size: 0.96rem;
+  letter-spacing: 0.16em;
 }
 
 .baby-badge {
   position: absolute;
   bottom: 26px;
-  right: 26px;
+  right: 30px;
   padding: 10px 16px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(194, 109, 77, 0.16);
+  background: rgba(255, 252, 246, 0.9);
+  border: 1px solid rgba(201, 152, 46, 0.26);
   font-size: 0.9rem;
   color: var(--accent-strong);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.18em;
 }
 
 .intro-panel {
@@ -373,29 +443,51 @@ h1 span {
   }
 
   .photo-frame {
-    min-height: 240px;
+    min-height: 320px;
   }
 
   .intro-panel {
     padding: 8px 0 12px;
   }
 
-  .photo-frame::before {
-    left: 18px;
-    top: 26px;
-    width: 140px;
-    height: 140px;
+  .spark-left,
+  .spark-right {
+    display: none;
   }
 
-  .photo-frame::after {
-    right: 8px;
+  .photo-frame::before {
+    left: -66px;
+    top: 18px;
     width: 180px;
     height: 180px;
   }
 
-  .moon {
-    width: 140px;
-    height: 140px;
+  .photo-frame::after {
+    right: -72px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .emblem-ring {
+    width: 220px;
+    height: 220px;
+  }
+
+  .emblem-core {
+    width: 156px;
+    height: 156px;
+  }
+
+  .emblem-copy {
+    margin-top: 14px;
+    font-size: 0.88rem;
+  }
+
+  .baby-badge {
+    right: 50%;
+    bottom: 18px;
+    transform: translateX(50%);
+    font-size: 0.82rem;
   }
 
   .details-grid {
