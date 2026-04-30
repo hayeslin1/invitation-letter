@@ -1,0 +1,401 @@
+:root {
+  --bg: #f6eadf;
+  --bg-deep: #e9d0b8;
+  --card: rgba(255, 252, 247, 0.78);
+  --text: #5a3424;
+  --muted: #8a6454;
+  --accent: #c26d4d;
+  --accent-soft: #f1c6a8;
+  --line: rgba(125, 79, 56, 0.16);
+  --shadow: 0 24px 80px rgba(127, 67, 40, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.7), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(255, 214, 178, 0.5), transparent 34%),
+    linear-gradient(135deg, var(--bg) 0%, #f9f2ea 42%, var(--bg-deep) 100%);
+}
+
+.page-shell {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 32px 18px;
+}
+
+.glow {
+  position: absolute;
+  border-radius: 999px;
+  filter: blur(18px);
+  opacity: 0.5;
+}
+
+.glow-left {
+  top: 6%;
+  left: -80px;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 238, 204, 0.9);
+}
+
+.glow-right {
+  right: -100px;
+  bottom: 12%;
+  width: 240px;
+  height: 240px;
+  background: rgba(220, 150, 116, 0.35);
+}
+
+.invite-card {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 36px 24px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 32px;
+  background: rgba(255, 252, 247, 0.92);
+  box-shadow: var(--shadow);
+  animation: fade-up 0.8s ease both;
+}
+
+.invite-card::before {
+  content: "";
+  position: absolute;
+  inset: 14px;
+  border: 1px solid rgba(194, 109, 77, 0.12);
+  border-radius: 24px;
+  pointer-events: none;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.hero-ornament .line {
+  width: 74px;
+  height: 1px;
+  background: rgba(194, 109, 77, 0.34);
+}
+
+.hero-ornament .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(194, 109, 77, 0.5);
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  font-size: 12px;
+  letter-spacing: 0.32em;
+  color: var(--muted);
+}
+
+h1 {
+  margin: 0;
+  font-family: "STSong", "Songti SC", "Noto Serif CJK SC", serif;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 1.15;
+  font-weight: 700;
+}
+
+h1 span {
+  display: block;
+  margin: 10px 0 6px;
+  color: var(--accent);
+}
+
+.lead {
+  max-width: 620px;
+  margin: 20px auto 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.photo-frame {
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin: 34px auto;
+  width: min(100%, 680px);
+  min-height: 280px;
+  border-radius: 28px;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 248, 0.8), rgba(240, 217, 197, 0.7)),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.photo-frame::before,
+.photo-frame::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+}
+
+.photo-frame::before {
+  width: 180px;
+  height: 180px;
+  background: rgba(255, 241, 216, 0.88);
+  top: 40px;
+  left: 80px;
+}
+
+.photo-frame::after {
+  width: 220px;
+  height: 220px;
+  background: rgba(243, 188, 149, 0.28);
+  right: 48px;
+  bottom: -30px;
+}
+
+.moon {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #fff9ee, #f3d9ba);
+  box-shadow:
+    inset -18px -16px 30px rgba(197, 125, 73, 0.12),
+    0 24px 36px rgba(179, 126, 84, 0.18);
+}
+
+.moon::after {
+  content: "";
+  position: absolute;
+  inset: 26px 24px 26px 54px;
+  border-radius: 50%;
+  background: rgba(239, 209, 180, 0.72);
+}
+
+.baby-badge {
+  position: absolute;
+  bottom: 26px;
+  right: 26px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(194, 109, 77, 0.16);
+  font-size: 0.9rem;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+
+.intro-panel {
+  max-width: 680px;
+  margin: 0 auto 18px;
+  padding: 22px 22px 18px;
+  text-align: center;
+}
+
+.intro-kicker {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  letter-spacing: 0.24em;
+}
+
+.intro-copy {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.detail-card {
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid var(--line);
+  animation: fade-up 0.9s ease both;
+}
+
+.detail-label {
+  margin: 0 0 10px;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.detail-value {
+  margin: 0;
+  font-family: "STSong", "Songti SC", "Noto Serif CJK SC", serif;
+  font-size: 1.18rem;
+  line-height: 1.5;
+}
+
+.detail-note {
+  margin: 8px 0 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.message-block {
+  margin-top: 20px;
+  padding: 26px 24px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(194, 109, 77, 0.12), rgba(255, 255, 255, 0.52));
+  border: 1px solid var(--line);
+}
+
+.quote {
+  margin: 0;
+  font-family: "STSong", "Songti SC", "Noto Serif CJK SC", serif;
+  font-size: 1.08rem;
+  line-height: 1.9;
+}
+
+.hosts {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.hosts strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.reminder-strip {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.reminder-strip span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid rgba(194, 109, 77, 0.12);
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.action-bar {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.action-bar a {
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.action-bar a:hover {
+  transform: translateY(-2px);
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: #fffdf8;
+  box-shadow: 0 14px 28px rgba(194, 109, 77, 0.22);
+}
+
+.secondary-btn {
+  color: var(--accent);
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(194, 109, 77, 0.22);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .invite-card {
+    padding: 28px 18px 24px;
+    border-radius: 26px;
+  }
+
+  .photo-frame {
+    min-height: 240px;
+  }
+
+  .intro-panel {
+    padding: 8px 0 12px;
+  }
+
+  .photo-frame::before {
+    left: 18px;
+    top: 26px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .photo-frame::after {
+    right: 8px;
+    width: 180px;
+    height: 180px;
+  }
+
+  .moon {
+    width: 140px;
+    height: 140px;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hosts,
+  .action-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hosts {
+    text-align: center;
+  }
+
+  .action-bar a {
+    text-align: center;
+  }
+}

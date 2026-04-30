@@ -1,0 +1,18 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#F6EADF"/>
+  <circle cx="218" cy="149" r="122" fill="#FFF5E6"/>
+  <circle cx="986" cy="520" r="156" fill="#EBC3A8" fill-opacity="0.55"/>
+  <rect x="95" y="72" width="1010" height="486" rx="36" fill="#FFF9F4"/>
+  <rect x="95.5" y="72.5" width="1009" height="485" rx="35.5" stroke="#E3C4AF"/>
+  <circle cx="600" cy="246" r="90" fill="url(#paint0_linear)"/>
+  <path d="M649 184C611.444 192.167 584 225.59 584 265.02C584 304.45 611.444 337.873 649 346C629.5 357.333 606.28 363.833 581.5 363.833C508.338 363.833 449 304.496 449 231.333C449 158.171 508.338 98.8333 581.5 98.8333C606.28 98.8333 629.5 105.334 649 116.667C613.876 124.267 588 152.757 588 186.667C588 220.576 613.876 249.066 649 256.667V184Z" fill="#EED7BF"/>
+  <text x="600" y="420" fill="#C26D4D" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="34" text-anchor="middle" letter-spacing="8">FULL MOON CELEBRATION</text>
+  <text x="600" y="474" fill="#5A3424" font-family="'STSong','Songti SC',serif" font-size="76" text-anchor="middle">小满月满月宴邀请函</text>
+  <text x="600" y="526" fill="#8A6454" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="30" text-anchor="middle">诚邀您一起见证新生命最初的圆满时刻</text>
+  <defs>
+    <linearGradient id="paint0_linear" x1="545" y1="176" x2="666" y2="324" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF9EE"/>
+      <stop offset="1" stop-color="#F3D9BA"/>
+    </linearGradient>
+  </defs>
+</svg>
