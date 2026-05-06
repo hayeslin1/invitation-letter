@@ -12,7 +12,7 @@
       content="谨定于 2026 年 5 月 2 日举行蔺乐琪满月宴，敬备薄酌，恭请光临。"
     />
     <meta name="format-detection" content="telephone=no, email=no, address=no" />
-    <meta name="theme-color" content="#8f0d1c" />
+    <meta name="theme-color" content="#ffd28a" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="蔺乐琪满月宴邀请函" />
     <meta property="og:site_name" content="蔺乐琪满月宴邀请函" />
@@ -29,178 +29,320 @@
       content="谨定于 2026 年 5 月 2 日举行蔺乐琪满月宴，敬备薄酌，恭请光临，并可在线登记来宾信息。"
     />
     <meta name="twitter:image" content="./images/festive-baby.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@500;600;700&family=Ma+Shan+Zheng&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <div class="glow glow-left"></div>
-      <div class="glow glow-right"></div>
-
-      <main class="invite-card">
-        <section class="hero">
-          <div class="hero-ornament" aria-hidden="true">
-            <span class="dot dot-left"></span>
-            <span class="line"></span>
-            <span class="dot dot-right"></span>
-          </div>
-          <p class="hero-blessing">满月有喜 福气盈门</p>
-          <p class="eyebrow">FULL MOON CELEBRATION</p>
-          <h1>
-            谨定于良辰吉日
-            <span>蔺乐琪</span>
-            的满月宴
-          </h1>
-          <p class="lead">
-            初见三十日，喜添新愿。特设薄宴，与亲友共庆满月之喜，恭候您的光临。
-          </p>
-        </section>
-
-        <section class="photo-frame" aria-label="满月宴主视觉">
-          <div class="frame-spark spark-left"></div>
-          <div class="frame-spark spark-right"></div>
-          <div class="celebration-emblem">
-            <p class="emblem-kicker">BLESSING DAY</p>
-            <div class="emblem-ring">
-              <div class="emblem-core">
-                <p class="emblem-name">蔺乐琪</p>
-                <p class="emblem-title">满月之喜</p>
-              </div>
-            </div>
-            <p class="emblem-copy">良辰共聚 喜乐同席</p>
-          </div>
-          <div class="baby-badge">2026 . 05 . 02</div>
-        </section>
-
-        <section class="intro-panel">
-          <p class="intro-kicker">INVITATION</p>
-          <p class="intro-copy">
-            值此弥月之际，谨备喜筵，敬邀亲朋挚友拨冗莅临，共叙情谊，同沾喜气。
-          </p>
-        </section>
-
-        <section class="details-grid">
-          <article class="detail-card">
-            <p class="detail-label">时间</p>
-            <p class="detail-value">2026 年 5 月 2 日</p>
-            <p class="detail-note">恭候您温馨赴宴</p>
-          </article>
-
-          <article class="detail-card">
-            <p class="detail-label">地点</p>
-            <p class="detail-value">刘皋大酒店</p>
-            <p class="detail-note">期待与您共聚美好时刻</p>
-          </article>
-
-          <article class="detail-card">
-            <p class="detail-label">主角</p>
-            <p class="detail-value">宝宝姓名：蔺乐琪</p>
-            <p class="detail-note">与家人一起期待您的到来</p>
-          </article>
-
-          <article class="detail-card">
-            <p class="detail-label">着装</p>
-            <p class="detail-value">喜庆轻礼服</p>
-            <p class="detail-note">轻松赴宴，留下热热闹闹的合影</p>
-          </article>
-        </section>
-
-        <section class="rsvp-section" aria-labelledby="rsvp-title">
-          <div class="section-block-heading">
-            <p class="section-block-kicker">GUEST REGISTRATION</p>
-            <h2 id="rsvp-title">来宾登记</h2>
-            <p class="section-block-copy">请留下您的到场信息，我们将提前为您安排席位与车位。</p>
-          </div>
-
-          <form
-            class="guest-form"
-            id="guest-form"
-            data-supabase-url="https://rbuwtmtnhtnnmycbqyud.supabase.co"
-            data-supabase-key="sb_publishable_fXHfk9XBN7g_kOE5T-WiEw_oaTvVJDO"
-          >
-            <div class="form-grid">
-              <label class="form-field">
-                <span>姓名</span>
-                <input type="text" name="name" maxlength="30" placeholder="请输入姓名" required />
-              </label>
-
-              <label class="form-field">
-                <span>手机号</span>
-                <input
-                  type="tel"
-                  name="phone"
-                  inputmode="numeric"
-                  pattern="^1[0-9]{10}$"
-                  maxlength="11"
-                  placeholder="请输入 11 位手机号"
-                  required
-                />
-              </label>
-
-              <label class="form-field">
-                <span>几人</span>
-                <input
-                  type="number"
-                  name="guest_count"
-                  min="1"
-                  max="20"
-                  value="1"
-                  required
-                />
-              </label>
-
-              <label class="form-field">
-                <span>是否需要预留车位</span>
-                <select name="need_parking" id="need-parking">
-                  <option value="false" selected>否</option>
-                  <option value="true">是</option>
-                </select>
-              </label>
-
-              <label class="form-field is-hidden" id="car-plate-field">
-                <span>车牌号</span>
-                <input type="text" name="car_plate" maxlength="20" placeholder="如需车位请填写车牌号" />
-              </label>
-
-              <label class="form-field form-field-full">
-                <span>备注</span>
-                <textarea name="notes" rows="4" maxlength="200" placeholder="可填写到场说明或其他备注（选填）"></textarea>
-              </label>
-            </div>
-
-            <div class="form-actions">
-              <button type="submit" class="primary-btn form-submit">提交登记</button>
-              <p class="form-status" id="form-status" aria-live="polite"></p>
-            </div>
-          </form>
-        </section>
-
-        <section class="message-block">
-          <p class="quote">
-            “一朝初诞，满月成礼。愿这份新生的欢喜，得与至亲好友一同见证，共享团圆与吉庆。”
-          </p>
-          <div class="hosts">
-            <span>邀请人</span>
-            <strong>蔺先生 & 周女士 敬邀</strong>
-          </div>
-        </section>
-
-        <section class="reminder-strip" aria-label="温馨提示">
-          <span>建议提前 10 分钟到场</span>
-          <span>现场备有伴手礼</span>
-          <span>欢迎拍照留念</span>
-        </section>
-
-        <section class="action-bar">
-          <a class="primary-btn" href="tel:15628783286">电话回执</a>
-          <a
-            class="secondary-btn"
-            href="https://uri.amap.com/search?keyword=%E5%88%98%E7%9A%8B%E5%A4%A7%E9%85%92%E5%BA%97"
-            rel="noreferrer"
-            >查看路线</a
-          >
-        </section>
-      </main>
+    <!-- 背景飘浮元素层 -->
+    <div class="sky" aria-hidden="true">
+      <!-- 云朵 -->
+      <span class="cloud cloud-1"></span>
+      <span class="cloud cloud-2"></span>
+      <span class="cloud cloud-3"></span>
+      <span class="cloud cloud-4"></span>
+      <!-- 星星 -->
+      <span class="star star-1">✦</span>
+      <span class="star star-2">✦</span>
+      <span class="star star-3">✦</span>
+      <span class="star star-4">✦</span>
+      <span class="star star-5">✦</span>
+      <!-- 糖果彩豆 confetti -->
+      <span class="confetti c-1"></span>
+      <span class="confetti c-2"></span>
+      <span class="confetti c-3"></span>
+      <span class="confetti c-4"></span>
+      <span class="confetti c-5"></span>
+      <span class="confetti c-6"></span>
     </div>
+
+    <main class="stage">
+      <!-- Hero：月亮 mascot + 大字 -->
+      <section class="hero">
+        <!-- 顶部贴纸 ribbon -->
+        <div class="ribbon" aria-hidden="true">
+          <span class="ribbon-dot"></span>
+          <span class="ribbon-text">MOON · DAY · 满月有喜</span>
+          <span class="ribbon-dot"></span>
+        </div>
+
+        <!-- 月亮 mascot -->
+        <div class="moon-wrap">
+          <svg
+            class="moon-mascot"
+            viewBox="0 0 260 260"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <defs>
+              <radialGradient id="moon-face" cx="40%" cy="36%" r="70%">
+                <stop offset="0%" stop-color="#fff6d4" />
+                <stop offset="60%" stop-color="#ffdd8f" />
+                <stop offset="100%" stop-color="#e9b45a" />
+              </radialGradient>
+              <filter id="moon-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur stdDeviation="3" />
+              </filter>
+            </defs>
+
+            <!-- 外圈柔光 -->
+            <circle cx="130" cy="130" r="120" fill="#fff1c9" opacity="0.45" />
+            <!-- 月面 -->
+            <circle cx="130" cy="130" r="104" fill="url(#moon-face)" />
+            <!-- 月面小陨石坑（更可爱） -->
+            <circle cx="92" cy="100" r="9" fill="#e9b45a" opacity="0.45" />
+            <circle cx="170" cy="88" r="6" fill="#e9b45a" opacity="0.38" />
+            <circle cx="186" cy="146" r="10" fill="#e9b45a" opacity="0.32" />
+            <circle cx="96" cy="168" r="7" fill="#e9b45a" opacity="0.38" />
+
+            <!-- 腮红 -->
+            <ellipse cx="86" cy="148" rx="14" ry="9" fill="#ffa89c" opacity="0.72" />
+            <ellipse cx="174" cy="148" rx="14" ry="9" fill="#ffa89c" opacity="0.72" />
+
+            <!-- 闭眼笑 -->
+            <path
+              d="M78 126 Q88 118 98 126"
+              stroke="#5e3a28"
+              stroke-width="5"
+              stroke-linecap="round"
+              fill="none"
+            />
+            <path
+              d="M162 126 Q172 118 182 126"
+              stroke="#5e3a28"
+              stroke-width="5"
+              stroke-linecap="round"
+              fill="none"
+            />
+
+            <!-- 嘴巴 -->
+            <path
+              d="M118 154 Q130 168 142 154"
+              stroke="#5e3a28"
+              stroke-width="4.5"
+              stroke-linecap="round"
+              fill="#ffc0b8"
+            />
+
+            <!-- 月亮顶部蝴蝶结（红色） -->
+            <g transform="translate(130 28) rotate(-6)">
+              <path
+                d="M-22 0 Q-22 -16 -4 -8 Q 0 0 -4 8 Q-22 16 -22 0 Z"
+                fill="#ff6b6b"
+              />
+              <path
+                d="M22 0 Q22 -16 4 -8 Q 0 0 4 8 Q22 16 22 0 Z"
+                fill="#ff6b6b"
+              />
+              <circle cx="0" cy="0" r="6" fill="#e85555" />
+              <circle cx="0" cy="0" r="2.5" fill="#fff" opacity="0.55" />
+            </g>
+          </svg>
+
+          <!-- 月亮旁漂浮的小星星（CSS 动画） -->
+          <span class="orbit-star os-1">★</span>
+          <span class="orbit-star os-2">✦</span>
+          <span class="orbit-star os-3">✧</span>
+        </div>
+
+        <!-- 标题 -->
+        <h1 class="title">
+          <span class="title-top">邀请你来参加</span>
+          <span class="title-name">蔺乐琪</span>
+          <span class="title-bottom">
+            的<em>满月宴</em>
+            <span class="title-sparkle" aria-hidden="true">✦</span>
+          </span>
+        </h1>
+
+        <p class="deck">
+          我是刚满三十天的新成员，胖嘟嘟的脸蛋还没见过你。<br />
+          爸爸妈妈备了小小的筵席，想和你一起庆祝我的第一个节日！
+        </p>
+
+        <!-- 大日期贴纸 -->
+        <div class="date-sticker" aria-label="宴会日期">
+          <div class="date-sticker-inner">
+            <span class="date-weekday">SAT</span>
+            <span class="date-day">02</span>
+            <span class="date-month">MAY 2026</span>
+          </div>
+          <span class="date-pin" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <!-- 细节贴纸卡片 · scatter -->
+      <section class="stickers" aria-label="宴会信息">
+        <article class="sticker sticker-a">
+          <span class="sticker-tag">⏰ 时间</span>
+          <p class="sticker-main">2026 / 5 / 2</p>
+          <p class="sticker-note">周六 · 恭候您温馨赴宴</p>
+        </article>
+
+        <article class="sticker sticker-b">
+          <span class="sticker-tag">📍 地点</span>
+          <p class="sticker-main">刘皋大酒店</p>
+          <p class="sticker-note">期待与您共聚美好时刻</p>
+        </article>
+
+        <article class="sticker sticker-c">
+          <span class="sticker-tag">👶 主角</span>
+          <p class="sticker-main">蔺乐琪</p>
+          <p class="sticker-note">胖嘟嘟的小 baby</p>
+        </article>
+
+        <article class="sticker sticker-d">
+          <span class="sticker-tag">👗 着装</span>
+          <p class="sticker-main">喜庆轻礼服</p>
+          <p class="sticker-note">留下热闹的合影 📸</p>
+        </article>
+      </section>
+
+      <!-- 温馨提示糖果 -->
+      <ul class="candy-strip" aria-label="温馨提示">
+        <li>🎁 现场备有伴手礼</li>
+        <li>⏱ 建议提前 10 分钟到场</li>
+        <li>📸 欢迎拍照留念</li>
+      </ul>
+
+      <!-- RSVP 登记表单 -->
+      <section class="rsvp-card" aria-labelledby="rsvp-title">
+        <div class="rsvp-head">
+          <span class="rsvp-kicker">👶 GUEST BOOK</span>
+          <h2 id="rsvp-title" class="rsvp-title">
+            来<em>登个记</em>吧！
+          </h2>
+          <p class="rsvp-copy">
+            告诉我们你的名字，我们会为你留好椅子和一块小蛋糕 🍰
+          </p>
+        </div>
+
+        <form
+          class="guest-form"
+          id="guest-form"
+          data-supabase-url="https://rbuwtmtnhtnnmycbqyud.supabase.co"
+          data-supabase-key="sb_publishable_fXHfk9XBN7g_kOE5T-WiEw_oaTvVJDO"
+          novalidate
+        >
+          <div class="form-grid">
+            <label class="form-field">
+              <span class="field-lbl"><em>✍️</em> 姓名</span>
+              <input
+                type="text"
+                name="name"
+                maxlength="30"
+                placeholder="你叫什么呀？"
+                required
+              />
+            </label>
+
+            <label class="form-field">
+              <span class="field-lbl"><em>📱</em> 手机号</span>
+              <input
+                type="tel"
+                name="phone"
+                inputmode="numeric"
+                pattern="^1[0-9]{10}$"
+                maxlength="11"
+                placeholder="11 位手机号"
+                required
+              />
+            </label>
+
+            <label class="form-field">
+              <span class="field-lbl"><em>👥</em> 几人来</span>
+              <input
+                type="number"
+                name="guest_count"
+                min="1"
+                max="20"
+                value="1"
+                required
+              />
+            </label>
+
+            <label class="form-field">
+              <span class="field-lbl"><em>🚗</em> 要留车位吗</span>
+              <select name="need_parking" id="need-parking">
+                <option value="false" selected>不用啦</option>
+                <option value="true">来一个</option>
+              </select>
+            </label>
+
+            <label class="form-field is-hidden" id="car-plate-field">
+              <span class="field-lbl"><em>🪪</em> 车牌号</span>
+              <input
+                type="text"
+                name="car_plate"
+                maxlength="20"
+                placeholder="留下你的车牌"
+              />
+            </label>
+
+            <label class="form-field form-field-full">
+              <span class="field-lbl"><em>💬</em> 想说点啥（选填）</span>
+              <textarea
+                name="notes"
+                rows="4"
+                maxlength="200"
+                placeholder="有小小孩、忌口、到场时间……都告诉我们"
+              ></textarea>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="bubble-btn form-submit">
+              <span class="bubble-emoji" aria-hidden="true">🎉</span>
+              <span class="bubble-label">提交登记</span>
+            </button>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </div>
+        </form>
+      </section>
+
+      <!-- 祝辞小卡 -->
+      <section class="blessing-card">
+        <span class="blessing-tape" aria-hidden="true"></span>
+        <p class="blessing-text">
+          “一朝初诞，满月成礼。<br />
+          愿这份新生的欢喜，得与至亲好友一同见证， <br />
+          共享团圆与吉庆。”
+        </p>
+        <div class="blessing-sign">
+          <span class="blessing-sign-label">邀请人</span>
+          <strong>蔺先生 &amp; 周女士 敬邀</strong>
+        </div>
+      </section>
+
+      <!-- CTA 气泡按钮 -->
+      <nav class="cta" aria-label="联系与路线">
+        <a class="bubble-btn" href="tel:15628783286">
+          <span class="bubble-emoji" aria-hidden="true">📞</span>
+          <span class="bubble-label">电话回执</span>
+        </a>
+        <a
+          class="bubble-btn bubble-btn-ghost"
+          href="https://uri.amap.com/search?keyword=%E5%88%98%E7%9A%8B%E5%A4%A7%E9%85%92%E5%BA%97"
+          rel="noreferrer"
+        >
+          <span class="bubble-emoji" aria-hidden="true">🗺️</span>
+          <span class="bubble-label">查看路线</span>
+        </a>
+      </nav>
+
+      <footer class="foot" aria-hidden="true">
+        <span class="foot-heart">♡</span>
+        <span>期待 2026 · 05 · 02 与你见面</span>
+        <span class="foot-heart">♡</span>
+      </footer>
+    </main>
+
     <script src="./script.js"></script>
   </body>
 </html>
